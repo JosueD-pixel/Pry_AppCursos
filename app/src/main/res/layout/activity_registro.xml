@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Pantalla "Registro al curso" (versión simple, solo vistas básicas de Android).
+    No depende de colors.xml ni de drawables. Va en res/layout/activity_registro.xml
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A4FA0"
+    android:orientation="vertical"
+    tools:context=".Vista.RegistroActivity">
+
+    <!-- Barra superior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/btnAtras"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTRO AL CURSO"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Contenido -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F4F6FA">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="INSCRIPCIÓN:"
+                android:textColor="#1F2933"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Curso (imagen + nombre) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#E9ECF1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/imgCursoRegistro"
+                    android:layout_width="96dp"
+                    android:layout_height="64dp"
+                    android:contentDescription="Imagen del curso"
+                    android:scaleType="centerCrop"
+                    tools:background="#C5CBD3" />
+
+                <TextView
+                    android:id="@+id/txtCursoRegistro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:textColor="#1F2933"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Matrícula -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="MATRÍCULA DEL ALUMNO:"
+                android:textColor="#1F2933"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtMatricula"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="6dp"
+                android:autofillHints="username"
+                android:background="#FFFFFF"
+                android:hint="@string/txtMatricula"
+                android:inputType="number"
+                android:maxLength="15"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#1F2933"
+                android:textColorHint="#5F6B7A"
+                android:textSize="18sp" />
+
+            <!-- Fecha de registro (se llena con un DatePickerDialog) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="FECHA DE REGISTRO:"
+                android:textColor="#1F2933"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtFecha"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="6dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+                android:focusable="false"
+                android:hint="@string/txtFecha"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#1F2933"
+                android:textColorHint="#5F6B7A"
+                android:textSize="18sp"/>
+
+            <!-- Correo institucional -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="CORREO INSTITUCIONAL:"
+                android:textColor="#1F2933"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="6dp"
+                android:autofillHints="emailAddress"
+                android:background="#FFFFFF"
+                android:hint="@string/txtCorreo"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#1F2933"
+                android:textColorHint="#5F6B7A"
+                android:textSize="18sp" />
+
+            <!-- Botones -->
+            <Button
+                android:id="@+id/btnConfirmar"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="#1E9E4A"
+                android:text="@string/btnConfirmar"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#E3E6EB"
+                android:text="@string/btnCancelar"
+                android:textColor="#1F2933"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

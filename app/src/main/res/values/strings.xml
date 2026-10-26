@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Pry_AppCursos</string>
+
+    //strings activity registro
+    <string name="btnAtras">←</string>
+    <string name="txtMatricula">Ej. 20240001</string>
+    <string name="txtFecha">Selecciona la fecha</string>
+    <string name="txtCorreo">correo@uthh.edu.mx</string>
+    <string name="btnConfirmar">CONFIRMAR INSCRIPCIÓN</string>
+    <string name="btnCancelar">CANCELAR</string>
+
 </resources>
