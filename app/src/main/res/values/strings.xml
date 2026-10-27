@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">Pry_AppCursos</string>
 
+    <!-- strings activity main (catalogo) -->
+    <string name="txtTitulo">CATÁLOGO DE CURSOS</string>
+    <string name="txtFiltrar">Filtrar por carrera:</string>
+    <string name="txtSinCursos">No hay cursos para esta carrera</string>
+    <string name="btnVerRegistros">VER REGISTROS</string>
+
+    <!-- strings item curso -->
+    <string name="btnVerDetalle">VER DETALLE</string>
+    <string name="btnRegistrarse">REGISTRARSE</string>
+    <string name="imgCurso">Imagen del curso</string>
+
     //strings activity registro
     <string name="btnAtras">←</string>
     <string name="txtMatricula">Ej. 20240001</string>
