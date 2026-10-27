@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/azulPrincipal"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Vista.MainActivity">
 
     <!-- Barra superior -->
     <TextView

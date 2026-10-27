@@ -9,8 +9,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.savedstate.serialization.encodeToSavedState
-import com.example.pry_appcursos.MainActivity
 import com.example.pry_appcursos.Presentador.clsRegistroPresentador
 import com.example.pry_appcursos.R
 import java.text.SimpleDateFormat
