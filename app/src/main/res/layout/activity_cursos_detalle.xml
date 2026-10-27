@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F4F6FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Cabecera con la Imagen y el Botón Atrás flotando -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+
+            <ImageView
+                android:id="@+id/ivPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="#C5CBD3" />
+
+            <Button
+                android:id="@+id/btnAtras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:backgroundTint="#80000000"
+                android:text="@string/btnAtras"
+                android:textColor="#FFFFFF" />
+        </FrameLayout>
+
+        <!-- Contenedor principal de los textos con padding -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Nombre del curso -->
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:textColor="#1F2933"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="PROGRAMACIÓN AVANZADA" />
+
+            <!-- Código del curso -->
+            <TextView
+                android:id="@+id/tvCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#5F6B7A"
+                android:textSize="14sp"
+                tools:text="Código: IS102" />
+
+            <!-- Bloque: Descripción -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="201dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DESCRIPCIÓN:"
+                    android:textColor="#1F2933"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="186dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#323F4B"
+                    android:textSize="15sp"
+                    tools:text="Estructuras de datos, recursividad, manejo de archivos..." />
+            </LinearLayout>
+
+            <!-- Bloque: Espacio -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblEspacio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Espacio:"
+                    android:textColor="#1F2933"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvEspacio"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#323F4B"
+                    android:textSize="15sp"
+                    tools:text="Edificio C, Salón C-101" />
+            </LinearLayout>
+
+            <!-- Bloque: Total horas -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblHoras"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total horas:"
+                    android:textColor="#1F2933"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvHoras"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#323F4B"
+                    android:textSize="15sp"
+                    tools:text="80 Horas" />
+            </LinearLayout>
+
+            <!-- Bloque: Días de atención -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblDias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Días de atención:"
+                    android:textColor="#1F2933"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDias"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#323F4B"
+                    android:textSize="15sp"
+                    tools:text="Lunes, Miércoles, Viernes (10:00 - 12:00 hrs)" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
