@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- colores catalogo -->
+    <color name="azulPrincipal">#1A4FA0</color>
+    <color name="verdeRegistro">#1E8E3E</color>
+    <color name="fondoCatalogo">#F4F6FA</color>
+    <color name="textoOscuro">#1F2933</color>
+    <color name="textoGris">#5F6B7A</color>
+    <color name="grisImagen">#C5CBD3</color>
 </resources>
