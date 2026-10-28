@@ -18,6 +18,9 @@ import com.example.pry_appcursos.Modelo.Cls_Carreras
 import com.example.pry_appcursos.Modelo.Cls_CursoInscritos
 import com.example.pry_appcursos.Presentador.Cls_VerRegistrosPresentador
 import com.example.pry_appcursos.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.pry_appcursos.Adaptador.Cls_InscritosAdaptador
 
 class VerRegistroActivity : AppCompatActivity() {
     private lateinit var presentador: Cls_VerRegistrosPresentador
@@ -26,14 +29,11 @@ class VerRegistroActivity : AppCompatActivity() {
     private lateinit var btnAtras: TextView
     private lateinit var btnVolverCatalogo: Button
 
+    private lateinit var rvInscritos: RecyclerView
+    private lateinit var adaptador: Cls_InscritosAdaptador
+
     private var listaCarreras: List<Cls_Carreras> = emptyList()
     private var idCarreraActual = -1
-
-    //Tarjetas de los cursos (id_curso 1 al 4)
-    private val tarjetas = listOf(R.id.cardCurso1, R.id.cardCurso2, R.id.cardCurso3, R.id.cardCurso4)
-    private val textosInscritos = listOf(R.id.txtInscritos1, R.id.txtInscritos2, R.id.txtInscritos3, R.id.txtInscritos4)
-    private val textosCupo = listOf(R.id.txtCupo1, R.id.txtCupo2, R.id.txtCupo3, R.id.txtCupo4)
-    private val barras = listOf(R.id.pbInscritos1, R.id.pbInscritos2, R.id.pbInscritos3, R.id.pbInscritos4)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +49,13 @@ class VerRegistroActivity : AppCompatActivity() {
         txtTotal = findViewById(R.id.txtTotal)
         btnAtras = findViewById(R.id.btnAtras)
         btnVolverCatalogo = findViewById(R.id.btnVolverCatalogo)
+
+        rvInscritos = findViewById(R.id.rvInscritos)
+
+        //RecyclerView en una columna
+        adaptador = Cls_InscritosAdaptador(emptyList())
+        rvInscritos.layoutManager = LinearLayoutManager(this)
+        rvInscritos.adapter = adaptador
 
         //Inicializar presentador
         presentador = Cls_VerRegistrosPresentador(this)
@@ -83,25 +90,7 @@ class VerRegistroActivity : AppCompatActivity() {
     }
 
     fun mostrarResumen(cursos: List<Cls_CursoInscritos>, total: Int) {
-        for (i in tarjetas.indices) {
-            val tarjeta = findViewById<View>(tarjetas[i])
-            val curso = cursos.find { it.id_curso == i + 1 }
-
-            if (curso == null) {
-                //El curso no pertenece a la carrera seleccionada
-                tarjeta.visibility = View.GONE
-            } else {
-                tarjeta.visibility = View.VISIBLE
-                findViewById<TextView>(textosInscritos[i]).text = "${curso.inscritos} inscritos"
-                findViewById<TextView>(textosCupo[i]).text = "${curso.cupo} total"
-
-                val barra = findViewById<ProgressBar>(barras[i])
-                barra.max = curso.cupo
-                barra.progress = curso.inscritos
-                val color = if (curso.inscritos >= curso.cupo) R.color.verdeRegistro else R.color.azulPrincipal
-                barra.progressTintList = ColorStateList.valueOf(getColor(color))
-            }
-        }
+        adaptador.actualizarLista(cursos)
         txtTotal.text = "Total: $total"
     }
     fun ejecutarVolver(v: View) {
