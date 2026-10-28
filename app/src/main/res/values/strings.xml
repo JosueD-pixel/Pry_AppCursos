@@ -22,7 +22,6 @@
     <string name="txtCursoRegistro"></string>
     <string name="imgCursoRegistro"></string>
 
-
     <!-- strings ver registros -->
     <string name="txtTituloRegistros">ESTADO DE INSCRIPCIONES</string>
     <string name="btnVolverCatalogo">VOLVER AL CATÁLOGO</string>
@@ -32,5 +31,14 @@
         <item>Ingeniería Industrial</item>
         <item>Administración</item>
     </string-array>
+
+    <!-- strings detalle -->
+    <string name="txtTituloDetalle">DETALLE DEL CURSO</string>
+    <string name="lblDescripcion">DESCRIPCIÓN:</string>
+    <string name="lblEspacio">ESPACIO:</string>
+    <string name="lblHoras">TOTAL DE HORAS:</string>
+    <string name="lblDias">DÍAS Y HORARIO DE ATENCIÓN:</string>
+    <string name="lblCupo">CUPO:</string>
+    <string name="lblGaleria">GALERÍA:</string>
 
 </resources>
