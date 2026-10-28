@@ -15,10 +15,13 @@
     <!-- strings activity registro -->
     <string name="btnAtras">←</string>
     <string name="txtMatricula">Ej. 20240001</string>
-    <string name="txtFecha">Selecciona la fecha</string>
+    <string name="txtFecha">Fecha de Hoy</string>
     <string name="txtCorreo">correo@uthh.edu.mx</string>
     <string name="btnConfirmar">CONFIRMAR INSCRIPCIÓN</string>
     <string name="btnCancelar">CANCELAR</string>
+    <string name="txtCursoRegistro"></string>
+    <string name="imgCursoRegistro"></string>
+
 
     <!-- strings ver registros -->
     <string name="txtTituloRegistros">ESTADO DE INSCRIPCIONES</string>

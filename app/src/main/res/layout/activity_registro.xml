@@ -61,6 +61,7 @@
                 android:textStyle="bold" />
 
             <!-- Curso (imagen + nombre) -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -113,9 +114,9 @@
                 android:paddingEnd="12dp"
                 android:textColor="#1F2933"
                 android:textColorHint="#5F6B7A"
+                android:imeOptions="actionDone"
                 android:textSize="18sp" />
 
-            <!-- Fecha de registro (se llena con un DatePickerDialog) -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -133,7 +134,6 @@
                 android:background="#FFFFFF"
                 android:clickable="true"
                 android:cursorVisible="false"
-                android:drawableEnd="@android:drawable/ic_menu_my_calendar"
                 android:focusable="false"
                 android:hint="@string/txtFecha"
                 android:importantForAutofill="no"
