@@ -100,8 +100,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    //Pendiente: pantalla de Ver registros (Luis)
+    //Abre la pantalla de Ver registros (Luis)
     fun ejecutarVerRegistros(v: View) {
-        Toast.makeText(this, "Ver registros", Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, VerRegistroActivity::class.java))
     }
 }

@@ -4,10 +4,12 @@ import com.example.pry_appcursos.Modelo.RegistroRequest
 import com.example.pry_appcursos.Modelo.RegistroResponse
 import com.example.pry_appcursos.Modelo.Cls_Carreras
 import com.example.pry_appcursos.Modelo.Cls_Cursos
+import com.example.pry_appcursos.Modelo.Cls_ResumenInscripciones
 import retrofit2.http.Body
 import retrofit2.http.POST
 import retrofit2.http.GET
 import retrofit2.http.Query
+
 
 
 interface ApiService {
@@ -24,4 +26,8 @@ interface ApiService {
     //Cursos de una carrera (id_carrera = 0 trae todos)
     @GET("cursos.php")
     suspend fun obtenerCursos(@Query("id_carrera") id_carrera: Int): List<Cls_Cursos>
+
+    //Resumen de inscritos por curso (id_carrera = 0 trae todos)
+    @GET("resumen_inscripciones.php")
+    suspend fun obtenerResumenInscripciones(@Query("id_carrera") id_carrera: Int): Cls_ResumenInscripciones
 }
