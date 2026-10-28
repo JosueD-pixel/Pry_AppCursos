@@ -15,6 +15,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pry_appcursos.Adaptador.Cls_CursosAdaptador
 import com.example.pry_appcursos.Modelo.Cls_Carreras
 import com.example.pry_appcursos.Modelo.Cls_Cursos
 import com.example.pry_appcursos.Presentador.Cls_CursosPresentador
@@ -97,6 +98,8 @@ class MainActivity : AppCompatActivity() {
     fun registrarse(curso: Cls_Cursos) {
         val intent = Intent(this, RegistroActivity::class.java)
         intent.putExtra("EXTRA_ID_CURSO", curso.id_curso)
+        intent.putExtra("EXTRA_NOMBRE_CURSO", curso.nombre_curso)
+        intent.putExtra("EXTRA_IMAGEN_CURSO", curso.url_imagen_principal)
         startActivity(intent)
     }
 
