@@ -82,8 +82,7 @@
                 <Spinner
                     android:id="@+id/spnCarreras"
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:entries="@array/carreras" />
+                    android:layout_height="48dp"/>
             </LinearLayout>
         </LinearLayout>
 
