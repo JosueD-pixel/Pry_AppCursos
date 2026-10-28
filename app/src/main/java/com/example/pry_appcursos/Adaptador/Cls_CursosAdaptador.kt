@@ -1,4 +1,4 @@
-package com.example.pry_appcursos.Vista
+package com.example.pry_appcursos.Adaptador
 
 import android.view.LayoutInflater
 import android.view.View

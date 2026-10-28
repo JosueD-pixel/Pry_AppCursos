@@ -1,5 +1,6 @@
 package com.example.pry_appcursos.InterfaceApi
 
+import com.example.pry_appcursos.Modelo.AlumnoResponse
 import com.example.pry_appcursos.Modelo.RegistroRequest
 import com.example.pry_appcursos.Modelo.RegistroResponse
 import com.example.pry_appcursos.Modelo.Cls_Carreras
@@ -24,4 +25,8 @@ interface ApiService {
     //Cursos de una carrera (id_carrera = 0 trae todos)
     @GET("cursos.php")
     suspend fun obtenerCursos(@Query("id_carrera") id_carrera: Int): List<Cls_Cursos>
+
+    //Buscar alumno
+    @GET("buscar_alumno.php")
+    suspend fun buscarAlumno(@Query("matricula") matricula: String): AlumnoResponse
 }

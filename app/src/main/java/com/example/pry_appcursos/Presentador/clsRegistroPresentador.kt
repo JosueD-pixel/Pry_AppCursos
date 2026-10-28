@@ -1,7 +1,7 @@
 package com.example.pry_appcursos.Presentador
 
 import android.util.Patterns
-import com.example.pry_appcursos.Modelo.clsRegistrarModelo
+import com.example.pry_appcursos.Modelo.clsRegistroModelo
 import com.example.pry_appcursos.Vista.RegistroActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class clsRegistroPresentador(private val view: RegistroActivity) {
-    private val modelo = clsRegistrarModelo()
+    private val modelo = clsRegistroModelo()
 
     fun realizarRegistro(id_curso: Int, matricula: String, correo: String, fecha: String){
         if (id_curso <= 0) {
@@ -49,6 +49,28 @@ class clsRegistroPresentador(private val view: RegistroActivity) {
             }
         }
 
+    }
+    fun buscarCorreo(matricula: String){
+        if(matricula.isEmpty()){
+            view.mostrarError("Ingresa la matricula")
+            return
+        }
+        CoroutineScope(Dispatchers.Main).launch {
+            try {
+                val respuesta= withContext(Dispatchers.IO){
+                    modelo.buscarAlumno(matricula)
+                }
+                if(respuesta.exito){
+                    view.mostrarCorreo(respuesta.correo, respuesta.nombre_alumno)
+                }
+                else{
+                    view.mostrarError(respuesta.mensaje)
+                }
+
+            }catch (e: Exception){
+                view.mostrarError("Error de conexion: ${e.localizedMessage ?: "Error desconocido"}")
+            }
+        }
     }
 
 }
