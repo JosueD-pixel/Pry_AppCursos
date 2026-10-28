@@ -91,7 +91,9 @@ class MainActivity : AppCompatActivity() {
 
     //Pendiente: pantalla de Detalle (Christian)
     fun verDetalle(curso: Cls_Cursos) {
-        Toast.makeText(this, "Detalle: ${curso.nombre_curso}", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, CursosDetalle::class.java)
+        intent.putExtra("EXTRA_ID_CURSO", curso.id_curso)
+        startActivity(intent)
     }
 
     //Abre la pantalla de Registro (Nathan) con el id del curso

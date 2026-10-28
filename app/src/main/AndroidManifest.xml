@@ -30,6 +30,10 @@
         <activity
             android:name=".Vista.VerRegistroActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".Vista.CursosDetalle"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import com.example.pry_appcursos.Modelo.RegistroRequest
 import com.example.pry_appcursos.Modelo.RegistroResponse
 import com.example.pry_appcursos.Modelo.Cls_Carreras
 import com.example.pry_appcursos.Modelo.Cls_Cursos
+import com.example.pry_appcursos.Modelo.Cls_DetalleCurso
 import com.example.pry_appcursos.Modelo.Cls_ResumenInscripciones
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -35,4 +36,8 @@ interface ApiService {
     //Buscar alumno
     @GET("buscar_alumno.php")
     suspend fun buscarAlumno(@Query("matricula") matricula: String): AlumnoResponse
+
+    //Detalle de un curso con su galeria
+    @GET("curso_detalle.php")
+    suspend fun obtenerDetalleCurso(@Query("id_curso") id_curso: Int): Cls_DetalleCurso
 }
