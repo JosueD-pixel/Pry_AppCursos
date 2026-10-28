@@ -12,7 +12,6 @@
     <string name="btnRegistrarse">REGISTRARSE</string>
     <string name="imgCurso">Imagen del curso</string>
 
-
     <!-- strings activity registro -->
     <string name="btnAtras">←</string>
     <string name="txtMatricula">Ej. 20240001</string>
@@ -23,5 +22,15 @@
     <string name="txtCursoRegistro"></string>
     <string name="imgCursoRegistro"></string>
 
+
+    <!-- strings ver registros -->
+    <string name="txtTituloRegistros">ESTADO DE INSCRIPCIONES</string>
+    <string name="btnVolverCatalogo">VOLVER AL CATÁLOGO</string>
+
+    <string-array name="carreras">
+        <item>Ingeniería de Sistemas</item>
+        <item>Ingeniería Industrial</item>
+        <item>Administración</item>
+    </string-array>
 
 </resources>
